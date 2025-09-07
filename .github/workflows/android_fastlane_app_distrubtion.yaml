@@ -38,9 +38,7 @@ jobs:
           # for know the gemfile location
           working-directory: android
 
-      - name: Install Bundler Dependencies
-        run: bundle install
-        working-directory: android
+
 
 
       - name: Build and Distribute App
