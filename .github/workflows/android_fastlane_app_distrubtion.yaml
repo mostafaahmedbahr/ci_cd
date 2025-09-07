@@ -47,6 +47,6 @@ jobs:
           APP_ID: ${{ secrets.APP_ID }}
         run: |
           cd android
-          fastlane android firebase_distribution
+          fastlane first_fastlane_action
         working-directory: android
 
