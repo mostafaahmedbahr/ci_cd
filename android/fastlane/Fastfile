@@ -1,0 +1,20 @@
+
+default_platform(:android)
+
+# To run the lane, execute the following command:
+# bundle exec fastlane firebase_distribution
+
+platform :android do
+  desc "Test"
+  lane :first_fastlane_action do
+    sh "flutter build apk"
+    firebase_app_distribution(
+        app: ENV["APP_ID"],
+        firebase_cli_token: ENV["FIREBASE_CLI_TOKEN"],
+        android_artifact_type: "APK",
+        android_artifact_path: "../build/app/outputs/flutter-apk/app-release.apk",
+        testers: "mustafa.bahr12323@gmail.com",
+        release_notes: "Testing App With Fastlane",
+  )
+  end
+end
