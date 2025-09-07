@@ -47,6 +47,6 @@ jobs:
           APP_ID: ${{ secrets.APP_ID }}
         run: |
           cd android
-          bundle exec fastlane android firebase_distribution
+          fastlane android firebase_distribution
         working-directory: android
 
